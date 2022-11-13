@@ -27,7 +27,7 @@
           <ul class="nav-menu">
             <li class="nav-item">
               <a
-                class="link nav-text nav-text:hover nav-text:focus"
+                class="link nav-text nav-text:hover nav-text:focus nav-agencja-decoration"
                 href="./index.html"
                 >Agencja</a
               >
@@ -80,8 +80,15 @@
             <h1>EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
           </div>
           <div class="button-placement">
-            <button class="header-button-colors" type="button">
+            <button class="header-button-colors" type="button" data-modal-open>
               Zamów usługe
+            </button>
+          </div>
+        </div>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <button class="modal-button" data-modal-close>
+              <span>X</span>
             </button>
           </div>
         </div>
@@ -144,29 +151,32 @@
         <div class="container">
           <h2>Czym się zajmujemy</h2>
           <ul class="section-placement">
-            <li class="item">
+            <li class="item boxes">
               <img
                 src="./images/box2.jpg"
                 alt="ręce człowieka piszącego kod na klawiaturze"
                 width="370"
                 height="294"
               />
+              <p class="label">Aplikacje komputerowe</p>
             </li>
-            <li class="item">
+            <li class="item boxes">
               <img
                 src="./images/box1.jpg"
                 alt="ręce człowieka projektującego strone internetową dla urządzeń mobilnych"
                 width="370"
                 height="294"
               />
+              <p class="label">Aplikacje mobilne</p>
             </li>
-            <li class="item">
+            <li class="item boxes">
               <img
                 src="./images/box3.jpg"
                 alt="ręce człowieka trzymającego tablet z paletą kolorów"
                 width="370"
                 height="294"
               />
+              <p class="label">Rozwiązania graficzne</p>
             </li>
           </ul>
         </div>
@@ -453,5 +463,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

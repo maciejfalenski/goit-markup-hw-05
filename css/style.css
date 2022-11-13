@@ -30,11 +30,44 @@ body {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.17;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-text:hover,
 .nav-text:focus {
   color: var(--hover-color);
+}
+
+.nav-agencja-decoration {
+  position: relative;
+}
+
+.nav-agencja-decoration::after {
+  position: absolute;
+  content: "";
+  height: 4px;
+  background-color: #2196f3;
+  border-radius: 2px;
+  width: 100%;
+  bottom: -32px;
+  left: 0px;
+}
+
+.nav-portfolio-decoration {
+  position: relative;
+}
+
+.nav-portfolio-decoration::after {
+  position: absolute;
+  content: "";
+  height: 4px;
+  background-color: #2196f3;
+  border-radius: 2px;
+  width: 100%;
+  bottom: -32px;
+  left: 0px;
 }
 
 .contact-text {
@@ -43,6 +76,9 @@ body {
   font-size: 14px;
   line-height: 1.17;
   color: #757575;
+  transition-property: color, stroke;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-text:hover,
@@ -163,6 +199,9 @@ address {
   font-weight: 400;
   line-height: 1.71;
   color: #ffffff99;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-footer:hover,
 .contact-footer:focus {
@@ -180,6 +219,9 @@ address {
   border: 0px;
   width: 121px;
   padding: 6px 22px;
+  transition-property: background-color, color, border, border-radius;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-text:hover,
 .button-text:focus {
@@ -232,10 +274,36 @@ li {
 .section-placement > .item:not(:last-child) {
   margin-right: 30px;
 }
+.boxes {
+  position: relative;
+}
+
+.boxes > .label {
+  position: absolute;
+  top: 224px;
+  right: 0;
+  margin: 0;
+  width: 370px;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+  color: #ffffff;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 27px 90px;
+}
+
 .filter-placement {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
+  transition-property: box-shadow, border-radius;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-placement > .item:not(:last-child) {
   margin-right: 8px;
@@ -252,6 +320,9 @@ li {
 }
 .card-set-item {
   flex-basis: calc((100% - 90px) / 4);
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card-set-item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -327,6 +398,9 @@ p {
   height: 92px;
   border: #afb1b8 1px solid;
   border-radius: 4px;
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-icon-border:hover {
   border: #2196f3 1px solid;
@@ -339,6 +413,9 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition-property: background-color, border-radius;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-icons-pleacement {
@@ -390,6 +467,9 @@ p {
   border: 1px rgba(255, 255, 255, 0.1) solid;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition-property: background-color, border-radius;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-socials-icons-placement {
   padding-top: 20px;
@@ -407,4 +487,74 @@ p {
 
 .icons-gap {
   padding-right: 10px;
+}
+
+.project-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-box > .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(33, 150, 243, 0.9);
+}
+
+.project-box:hover .overlay {
+  transform: translateY(0);
+}
+
+.overlay > p {
+  color: #fff;
+  padding: 49px 45px 49px 24px;
+  margin: 0;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: transfrom;
+  display: flex;
+}
+
+.is-hidden {
+  transform: translateX(-100%);
+}
+
+.modal {
+  width: 528px;
+  height: 581px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  margin: auto;
+  padding: 8px;
+  position: relative;
+}
+
+.modal-button {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  right: 8px;
 }

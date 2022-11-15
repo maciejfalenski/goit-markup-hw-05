@@ -535,7 +535,6 @@ p {
 
 .is-hidden {
   transform: translateX(-100%);
-  opacity: 0;
 }
 
 .modal {

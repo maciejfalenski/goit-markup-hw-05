@@ -520,7 +520,6 @@ p {
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  z-index: 2;
 }
 
 .backdrop {
@@ -532,6 +531,7 @@ p {
   background-color: rgba(0, 0, 0, 0.2);
   transition: transfrom;
   display: flex;
+  z-index: 2;
 }
 
 .is-hidden {
